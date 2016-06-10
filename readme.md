@@ -51,7 +51,7 @@ Or, call directly with buffer:
     let fs = require('fs'),
         PDFParser = require("./pdf2json/PDFParser");
 
-    let pdfParser = new PDFParser();
+    let pdfParser = new PDFParser(null, true); //need for getRawTextContent
 
     pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError) );
     pdfParser.on("pdfParser_dataReady", pdfData => {
